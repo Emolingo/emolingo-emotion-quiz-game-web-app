@@ -15,6 +15,7 @@ export default (state = {}, action) => {
                                     : state.indexInQuiz + 1;
             return {
                 ...state,
+                indexError: null,
                 indexInQuiz,
                 answers: [...(state.answers || []), action.indexAnswer]
             };
