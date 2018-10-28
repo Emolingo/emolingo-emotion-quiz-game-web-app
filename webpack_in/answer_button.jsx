@@ -43,6 +43,10 @@ class AnswerButton extends React.Component {
                         padding: '1em'
                     }}
                     onClick={ () => {
+                        if (this.props.indexCorrect != null) {
+                            return;
+                        }
+
                         if (indexInQuestion !== objQuestion.indexCorrect) {
                             this.props.flashError(indexInQuestion);
                             this._doFlash();
