@@ -29,30 +29,8 @@ class QuizPane extends React.Component {
 
         return (
             <div>
-              <ol>
-                {
-                    arrQuizQuestions.map(
-                        (objQuestion, index) => {
-                            const indexAnswer = this.props.answers[index];
-                            return (
-                                <li key={ index }>
-                                  {
-                                      objQuestion.text
-                                          + ", "
-                                          + objQuestion.answers[indexAnswer].text
-                                          + ", "
-                                          + (indexAnswer === objQuestion.indexCorrect
-                                              ? "Correct!"
-                                              : "Incorrect")
-                                  }
-                                </li>
-                            )
-                        }
-                    )
-                }
-              </ol>
               <div>
-                Total correct: { totalCorrect + " / " + arrQuizQuestions.length }
+                Congratulations!  You completed the quiz!
               </div>
               <button onClick={ () => {
                       this.props.init();
