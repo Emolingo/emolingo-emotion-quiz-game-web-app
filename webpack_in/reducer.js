@@ -23,7 +23,8 @@ export default (state = {}, action) => {
         case action_types.ACTION_FLASH_CORRECT:
             return {
                 ...state,
-                indexCorrect: action.indexAnswer
+                indexCorrect: action.indexAnswer,
+                indexError: null
             };
         case action_types.ACTION_FLASH_ERROR:
             return {
