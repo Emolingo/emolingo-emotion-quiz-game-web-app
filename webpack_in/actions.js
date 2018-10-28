@@ -8,6 +8,10 @@ export default {
         type: action_types.ACTION_NEXT_QUESTION,
         indexAnswer
     }),
+    flash_correct: indexAnswer => ({
+        type: action_types.ACTION_FLASH_CORRECT,
+        indexAnswer
+    }),
     flash_error: indexAnswer => ({
         type: action_types.ACTION_FLASH_ERROR,
         indexAnswer

@@ -8,10 +8,12 @@ import actions from './actions.js';
 
 
 const mapStateToProps = state => ({
+    indexCorrect: state.indexCorrect,
     indexError: state.indexError
 });
 
 const mapDispatchToProps = dispatch => ({
+    flashCorrect: indexAnswer => dispatch(actions.flash_correct(indexAnswer)),
     flashError: indexAnswer => dispatch(actions.flash_error(indexAnswer)),
     nextQuestion: indexAnswer => dispatch(actions.next_question(indexAnswer))
 });
@@ -30,29 +32,33 @@ class AnswerButton extends React.Component {
 
         return (
             <button style={{
-                        background: (this.state.flash &&
-                                     this.props.indexError === indexInQuestion)
-                                        ? 'red'
+                        background: this.state.flash
+                                        ? (this.props.indexCorrect === indexInQuestion)
+                                              ? 'green'
+                                              : (this.props.indexError === indexInQuestion
+                                                    ? 'red'
+                                                    : null)
                                         : null,
                         margin: '1em',
                         padding: '1em'
                     }}
                     onClick={ () => {
                         if (indexInQuestion !== objQuestion.indexCorrect) {
-                            this.props.flashError(indexInQuestion)
+                            this.props.flashError(indexInQuestion);
                             this._doFlash();
                             return;
                         }
-                        this.props.nextQuestion(indexInQuestion)
+                        this.props.flashCorrect(indexInQuestion);
+                        this._doFlash(2, () => {
+                            this.props.nextQuestion(indexInQuestion);
+                        });
                     }}>
               { objQuestion.answers[indexInQuestion].text }
             </button>
         );
     }
 
-    _doFlash() {
-        let totalFlashes = 4;
-
+    _doFlash(totalFlashes = 4, callback) {
         const _doCycle = () => {
             this.setState({
                 flash: true
@@ -63,7 +69,11 @@ class AnswerButton extends React.Component {
                     flash: false
                 });
                 totalFlashes--;
-                if (totalFlashes > 0) {
+                if (totalFlashes === 0) {
+                    if (callback) {
+                        callback.apply(this);
+                    }
+                } else {
                     setTimeout(() => {
                         _doCycle();
                     }, 250);
