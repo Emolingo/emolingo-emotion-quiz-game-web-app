@@ -17,7 +17,7 @@ export default (state = {}, action) => {
                 ...state,
                 indexInQuiz,
                 answers: [...(state.answers || []), action.indexAnswer]
-            }
+            };
         default:
     }
 
