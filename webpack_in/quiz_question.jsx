@@ -20,9 +20,9 @@ class QuizQuestion extends React.Component {
             <div>
               { objQuestion.video
                   ? (
-                      <video width={ 320 } controls>
-                        <source src={ "videos/" + objQuestion.video }></source>
-                      </video>
+                      <video controls
+                             src={ "videos/" + objQuestion.video }
+                             width={ 320 } />
                     )
                   : null}
               <div>
