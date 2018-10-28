@@ -19,6 +19,11 @@ export default (state = {}, action) => {
                 indexInQuiz,
                 answers: [...(state.answers || []), action.indexAnswer]
             };
+        case action_types.ACTION_FLASH_ERROR:
+            return {
+                ...state,
+                indexError: action.indexAnswer
+            };
         default:
     }
 

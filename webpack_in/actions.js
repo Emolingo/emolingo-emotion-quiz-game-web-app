@@ -7,5 +7,9 @@ export default {
     next_question: indexAnswer => ({
         type: action_types.ACTION_NEXT_QUESTION,
         indexAnswer
+    }),
+    flash_error: indexAnswer => ({
+        type: action_types.ACTION_FLASH_ERROR,
+        indexAnswer
     })
 };
