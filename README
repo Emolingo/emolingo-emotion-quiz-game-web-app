@@ -1,13 +1,6 @@
-Emolingo Feeling Words Match Game Web App
-https://github.com/Emolingo/emolingo-feeling-words-match-game-web-app
+Emolingo Emotion Recognition Quiz Game Web App
+https://github.com/Emolingo/emolingo-emotional-quiz-game-web-app
 
-Play this game at: https://emolingo.github.io/feeling_words_match/
-
-This game is intended for expanding vocabulary of emotion-describing terms.
-
-The game works by taking 3 random pairs of matching emotion-describing terms,
-and then shuffling the corresponding 6 terms and displaying them to the user.
-The user then has to match the 3 pairs by clicking on each term and then on its
-corresponding peer.
+This game quizzes the user to recognize various emotions.
 
 This is the main development branch.
