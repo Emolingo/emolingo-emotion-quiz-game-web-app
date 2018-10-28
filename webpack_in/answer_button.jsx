@@ -23,8 +23,8 @@ class AnswerButton extends React.Component {
         return (
             <button style={{ margin: '1em', padding: '1em' }}
                     onClick={ () => {
-                    this.props.nextQuestion(indexInQuestion)
-                }}>
+                        this.props.nextQuestion(indexInQuestion)
+                    }}>
               { objQuestion.answers[indexInQuestion].text }
             </button>
         );
