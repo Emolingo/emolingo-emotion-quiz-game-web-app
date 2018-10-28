@@ -23,6 +23,10 @@ class AnswerButton extends React.Component {
         return (
             <button style={{ margin: '1em', padding: '1em' }}
                     onClick={ () => {
+                        if (indexInQuestion !== objQuestion.indexCorrect) {
+                            alert("Wrong answer, please try again!");
+                            return;
+                        }
                         this.props.nextQuestion(indexInQuestion)
                     }}>
               { objQuestion.answers[indexInQuestion].text }
