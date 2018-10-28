@@ -15,9 +15,15 @@ export default (state = {}, action) => {
                                     : state.indexInQuiz + 1;
             return {
                 ...state,
+                indexCorrect: null,
                 indexError: null,
                 indexInQuiz,
                 answers: [...(state.answers || []), action.indexAnswer]
+            };
+        case action_types.ACTION_FLASH_CORRECT:
+            return {
+                ...state,
+                indexCorrect: action.indexAnswer
             };
         case action_types.ACTION_FLASH_ERROR:
             return {
