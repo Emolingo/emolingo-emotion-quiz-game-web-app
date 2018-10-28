@@ -1,0 +1,4 @@
+export default {
+    ACTION_INIT: 'ACTION_INIT',
+    ACTION_NEXT_QUESTION: 'ACTION_NEXT_QUESTION'
+}
