@@ -1,58 +1,66 @@
 export default [{
-    text: "Sample question 1",
-    video: 'bitter_welcome_home_captain.mp4',
+    text: "What primary emotion is being expressed by the woman in this clip?",
+    video: 'sad_troi_sad_short.mp4',
     answers: [{
-        text: "1 Answer 1"
+        text: "1 Happiness"
     }, {
-        text: "1 Answer 2"
+        text: "1 Sadness"
     }, {
-        text: "1 Answer 3"
+        text: "1 Anger"
     }, {
-        text: "1 Answer 4"
-    }, {
-        text: "1 Answer 5"
-    }],
-    indexCorrect: 2
-}, {
-    text: "Sample question 2",
-    answers: [{
-        text: "2 Answer 1"
-    }, {
-        text: "2 Answer 2"
-    }, {
-        text: "2 Answer 3"
-    }, {
-        text: "2 Answer 4"
-    }, {
-        text: "2 Answer 5"
+        text: "1 Fear"
     }],
     indexCorrect: 1
 }, {
-    text: "Sample question 3",
+    text: "What primary emotion is being expressed by the two people in this clip?",
+    video: 'excitement_riker_pulaski_enter.mp4',
     answers: [{
-        text: "3 Answer 1"
+        text: "2 Happiness"
     }, {
-        text: "3 Answer 2"
+        text: "2 Sadness"
     }, {
-        text: "3 Answer 3"
+        text: "2 Anger"
     }, {
-        text: "3 Answer 4"
-    }, {
-        text: "3 Answer 5"
-    }],
-    indexCorrect: 4
-}, {
-    text: "Sample question 4",
-    answers: [{
-        text: "4 Answer 1"
-    }, {
-        text: "4 Answer 2"
-    }, {
-        text: "4 Answer 3"
-    }, {
-        text: "4 Answer 4"
-    }, {
-        text: "4 Answer 5"
+        text: "2 Fear"
     }],
     indexCorrect: 0
+}, {
+    text: "What primary emotion is being expressed by Worf in this clip?",
+    video: 'disappointment_what_is_the_meaning_of_this.mp4',
+    answers: [{
+        text: "3 Happiness"
+    }, {
+        text: "3 Sadness"
+    }, {
+        text: "3 Anger"
+    }, {
+        text: "3 Fear"
+    }],
+    indexCorrect: 2
+}, {
+    text: "What might be a good explanation for why Worf is feeling angry?",
+    video: 'disappointment_what_is_the_meaning_of_this.mp4',
+    answers: [{
+        text: "4 Someone just murdered his family"
+    }, {
+        text: "4 He just lost his job"
+    }, {
+        text: "4 Someone just made fun of him"
+    }, {
+        text: "4 His friend arrived late yet again"
+    }],
+    indexCorrect: 3
+}, {
+    text: "What specific emotion is being expressed by Worf in this clip?",
+    video: 'disappointment_what_is_the_meaning_of_this.mp4',
+    answers: [{
+        text: "5 Fury"
+    }, {
+        text: "5 Disappointment"
+    }, {
+        text: "5 Indignant"
+    }, {
+        text: "5 Jealous"
+    }],
+    indexCorrect: 1
 }];
