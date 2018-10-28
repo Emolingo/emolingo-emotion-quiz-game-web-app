@@ -1,5 +1,5 @@
 //  This file is part of Emolingo Emotion Recognition Quiz Game Web App.
-//  https://github.com/Emolingo/emolingo-emotional-quiz-game-web-app
+//  https://github.com/Emolingo/emolingo-emotion-quiz-game-web-app
 
 import React from 'react';
 import { connect } from 'react-redux';
